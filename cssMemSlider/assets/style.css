@@ -68,12 +68,6 @@ input {
 #s5:checked ~ .slider .slider__wrapper{
     transform: translateX(-400%);
 }
-#s6:checked ~ .slider .slider__wrapper{
-    transform: translateX(-500%);
-}
-#s7:checked ~ .slider .slider__wrapper{
-    transform: translateX(-600%);
-}
 
 .slider__controls {
     list-style-type: none;
@@ -120,9 +114,7 @@ label:active > span {
 #s2:checked ~ .slider #l2 > span,
 #s3:checked ~ .slider #l3 > span,
 #s4:checked ~ .slider #l4 > span,
-#s5:checked ~ .slider #l5 > span,
-#s6:checked ~ .slider #l6 > span,
-#s7:checked ~ .slider #l7 > span {
+#s5:checked ~ .slider #l5 > span {
     border: 0.2rem solid #2d84e0;
     background-color: transparent;
 }
@@ -131,9 +123,7 @@ label:active > span {
 #s2:checked ~ .slider #l2:hover > span,
 #s3:checked ~ .slider #l3:hover > span,
 #s4:checked ~ .slider #l4:hover > span,
-#s5:checked ~ .slider #l5:hover > span,
-#s6:checked ~ .slider #l6:hover > span,
-#s7:checked ~ .slider #l7:hover > span {
+#s5:checked ~ .slider #l5:hover > span {
     border-color: #ffffff;
 }
 
@@ -141,9 +131,7 @@ label:active > span {
 #s2:checked ~ .slider #l2:active > span,
 #s3:checked ~ .slider #l3:active > span,
 #s4:checked ~ .slider #l4:active > span,
-#s5:checked ~ .slider #l5:active > span,
-#s6:checked ~ .slider #l6:active > span,
-#s7:checked ~ .slider #l7:active > span {
+#s5:checked ~ .slider #l5:active > span {
     border-color: #999999;
 }
 
