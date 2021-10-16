@@ -1,0 +1,156 @@
+:root {
+    --c-main-bg: #333333;
+    --c-text: #ffffff;
+    --c-default-bullet: #2d84e0;
+    --c-hover-bullet: #ffffff;
+    --c-active-bullet: #999999;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1rem;
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: var(--c-main-bg);
+}
+
+input {
+    display: none;
+}
+
+.slider {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 1rem 10%;
+    overflow-x: hidden;
+}
+
+.slider__wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider__item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.slider__item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.slider__item figcaption {
+    font: 2rem/1 Arial, sans-serif;
+    color: var(--c-text);
+}
+
+#s1:checked ~ .slider .slider__wrapper{
+    transform: translateX(0);
+}
+#s2:checked ~ .slider .slider__wrapper{
+    transform: translateX(-100%);
+}
+#s3:checked ~ .slider .slider__wrapper{
+    transform: translateX(-200%);
+}
+#s4:checked ~ .slider .slider__wrapper{
+    transform: translateX(-300%);
+}
+#s5:checked ~ .slider .slider__wrapper{
+    transform: translateX(-400%);
+}
+
+.slider__controls {
+    list-style-type: none;
+    width: fit-content;
+    margin: 0 0 0 auto;
+    padding: 0 0 0 1rem;
+    text-align: right;
+    position: relative;
+    top: -2rem;
+    background-color: var(--c-main-bg);
+}
+
+.slider__controls li {
+    display: inline-block;
+}
+
+label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+label > span {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--c-default-bullet);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+label:hover > span {
+    background-color: var(--c-hover-bullet);
+}
+
+label:active > span {
+    background-color: var(--c-active-bullet);
+}
+
+#s1:checked ~ .slider #l1 > span,
+#s2:checked ~ .slider #l2 > span,
+#s3:checked ~ .slider #l3 > span,
+#s4:checked ~ .slider #l4 > span,
+#s5:checked ~ .slider #l5 > span {
+    border: 0.2rem solid var(--c-default-bullet);
+    background-color: transparent;
+}
+
+#s1:checked ~ .slider #l1:hover > span,
+#s2:checked ~ .slider #l2:hover > span,
+#s3:checked ~ .slider #l3:hover > span,
+#s4:checked ~ .slider #l4:hover > span,
+#s5:checked ~ .slider #l5:hover > span {
+    border-color: var(--c-hover-bullet);
+}
+
+#s1:checked ~ .slider #l1:active > span,
+#s2:checked ~ .slider #l2:active > span,
+#s3:checked ~ .slider #l3:active > span,
+#s4:checked ~ .slider #l4:active > span,
+#s5:checked ~ .slider #l5:active > span {
+    border-color: var(--c-active-bullet);
+}
+
+@media screen and (max-width: 768px) {
+    .slider__item img {
+        margin-bottom: 5rem;
+    }
+
+    .slider__controls {
+        top: -5rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
