@@ -43,7 +43,7 @@ input {
     display: block;
     max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border-radius: 1rem;
 }
 
@@ -107,4 +107,16 @@ label:before {
 #s7:checked ~ .slider #l7:before {
     content: "\29BF";
     color: rgb(45, 132, 224);
+}
+
+@media screen and (max-width: 768px) {
+    .slider__item img {
+        margin-bottom: 5rem;
+    }
+
+    .slider__controls {
+        top: -6rem;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
