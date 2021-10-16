@@ -14,6 +14,7 @@ body {
     max-width: 1920px;
     min-width: 320px;
     margin: 0 auto;
+    background-color: #333333;
 }
 
 input {
@@ -49,6 +50,7 @@ input {
 
 .slider__item figcaption {
     font: 2rem/1 Arial, sans-serif;
+    color: #ffffff;
 }
 
 #s1:checked ~ .slider .slider__wrapper{
@@ -80,8 +82,8 @@ input {
     padding: 0 0 0 1rem;
     text-align: right;
     position: relative;
-    top: -3rem;
-    background-color: #fff;
+    top: -2rem;
+    background-color: #333333;
 }
 
 .slider__controls li {
@@ -89,24 +91,60 @@ input {
 }
 
 label {
-    font-size: 2rem;
-    color: #999;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
 }
 
-label:before {
-    content: "\26AC";
+label > span {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #2d84e0;
+    box-sizing: border-box;
+    border-radius: 50%;
 }
 
-#s1:checked ~ .slider #l1:before,
-#s2:checked ~ .slider #l2:before,
-#s3:checked ~ .slider #l3:before,
-#s4:checked ~ .slider #l4:before,
-#s5:checked ~ .slider #l5:before,
-#s6:checked ~ .slider #l6:before,
-#s7:checked ~ .slider #l7:before {
-    content: "\29BF";
-    color: rgb(45, 132, 224);
+label:hover > span {
+    background-color: #ffffff;
+}
+
+label:active > span {
+    background-color: #999999;
+}
+
+#s1:checked ~ .slider #l1 > span,
+#s2:checked ~ .slider #l2 > span,
+#s3:checked ~ .slider #l3 > span,
+#s4:checked ~ .slider #l4 > span,
+#s5:checked ~ .slider #l5 > span,
+#s6:checked ~ .slider #l6 > span,
+#s7:checked ~ .slider #l7 > span {
+    border: 0.2rem solid #2d84e0;
+    background-color: transparent;
+}
+
+#s1:checked ~ .slider #l1:hover > span,
+#s2:checked ~ .slider #l2:hover > span,
+#s3:checked ~ .slider #l3:hover > span,
+#s4:checked ~ .slider #l4:hover > span,
+#s5:checked ~ .slider #l5:hover > span,
+#s6:checked ~ .slider #l6:hover > span,
+#s7:checked ~ .slider #l7:hover > span {
+    border-color: #ffffff;
+}
+
+#s1:checked ~ .slider #l1:active > span,
+#s2:checked ~ .slider #l2:active > span,
+#s3:checked ~ .slider #l3:active > span,
+#s4:checked ~ .slider #l4:active > span,
+#s5:checked ~ .slider #l5:active > span,
+#s6:checked ~ .slider #l6:active > span,
+#s7:checked ~ .slider #l7:active > span {
+    border-color: #999999;
 }
 
 @media screen and (max-width: 768px) {
@@ -115,7 +153,7 @@ label:before {
     }
 
     .slider__controls {
-        top: -6rem;
+        top: -5rem;
         margin: 0 auto;
         text-align: center;
     }
